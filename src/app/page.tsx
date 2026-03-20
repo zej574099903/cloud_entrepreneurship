@@ -8,26 +8,26 @@ import CategoryCard from '@/components/dashboard/CategoryCard';
 import { Sparkles, Compass } from 'lucide-react';
 
 const ALL_CATEGORIES = [
-  { title: '淀粉肠摆摊', type: 'STALL', minCapital: 1800, rec: 4.9, image: '/thumbnails/starch_sausage_cover_1773987973087.png', slug: 'starch-sausage', isDeveloped: true },
+  { title: '淀粉肠摆摊', type: 'STALL', minCapital: 1800, rec: 4.9, image: '/thumbnails/starch_sausage_anime_stall.png', slug: 'starch-sausage', isDeveloped: true },
+  { title: '手打柠檬茶', type: 'STALL', minCapital: 3800, rec: 4.8, image: '/thumbnails/lemon_tea_anime_stall.png', slug: 'lemon-tea', isDeveloped: true },
   { title: '精品移动咖啡', type: 'MOBILE', minCapital: 35000, rec: 4.5, image: '/thumbnails/mobile_coffee_cover_1773988038295.png', slug: 'mobile-coffee', isDeveloped: false },
   { title: '特色煎饼果子', type: 'STALL', minCapital: 5000, rec: 4.7, image: '/thumbnails/pancake_stall_cover_1773988103430.png', slug: 'pancake-stall', isDeveloped: false },
   { title: '手办潮玩具集合店', type: 'STORE', minCapital: 15000, rec: 4.2, image: '/thumbnails/toy_store_cover_1773988182298.png', slug: 'toy-store', isDeveloped: false },
   { title: '手机贴膜/周边', type: 'TECH', minCapital: 1200, rec: 4.8, image: '/thumbnails/phone_acc_cover_1773988258046.png', slug: 'phone-acc', isDeveloped: false },
-  { title: '社区自助洗衣店', type: 'STORE', minCapital: 450000, rec: 4.0, image: '/thumbnails/laundry_self_cover_1773988339800.png', slug: 'laundry-self', isDeveloped: false },
 ];
 
 export default function Home() {
   const [activeType, setActiveType] = useState('ALL');
 
   // Filter categories based on selected type
-  const filtered = activeType === 'ALL' 
-    ? ALL_CATEGORIES 
+  const filtered = activeType === 'ALL'
+    ? ALL_CATEGORIES
     : ALL_CATEGORIES.filter(cat => cat.type === activeType);
 
   return (
     <div className="min-h-screen">
       <Sidebar />
-      
+
       <main className="ml-64 p-10 lg:p-14">
         <Header />
 
@@ -47,7 +47,7 @@ export default function Home() {
                 先锁定兴趣赛道，再进行 AI 多维度成本估算。每一个伟大的企业，都始于一次理性的仿真实验。
               </p>
             </div>
-            
+
             {/* Background Accent */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 h-96 w-96 rounded-full bg-orange-400/20 blur-[120px]"></div>
           </section>

@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { ProjectProvider } from "@/context/ProjectContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,7 +32,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ProjectProvider>
+          {children}
+        </ProjectProvider>
       </body>
     </html>
   );
